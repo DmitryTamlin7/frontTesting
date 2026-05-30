@@ -2,7 +2,7 @@
 
 1. **Клонирование репозитория:**
    ```bash
-   git clone <https://github.com/DmitryTamlin7/frontTesting>
+   git clone https://github.com/DmitryTamlin7/frontTesting
    cd frontTesting
    
    ./gradlew test
