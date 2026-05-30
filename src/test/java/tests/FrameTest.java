@@ -15,25 +15,23 @@ public class FrameTest extends BaseTest{
     private final FramesPage framesPage = new FramesPage();
 
     @Test
-    @Story("Работа с вложенностью")
+    @Story("Взаимодействие с вложенными фреймами")
     @DisplayName("Клик по кнопкам внутри фреймов")
-    @Description("Переключение контекста внешних и внутренних и работа с локатором")
+    @Description("Переключение контекста во внешний и вложенный фреймы используя локатор")
     void framesClickTest() {
         framesPage.openPage()
                 .switchToOuterFrame()
-                .clickEditButtonByDataAttribute()
-                .clickSubmitButtonByName()
-                .clickSubmitButtonByName()
-                .clickClickButtonByText()
+                .clickEditByDataAttribute()
+                .clickSubmitByText()
+                .clickClickMeByName()
                 .clickPrimaryByXpath()
 
                 .switchToInnerFrame()
-                .clickEditButtonByDataAttribute()
-                .clickSubmitButtonByName()
-                .clickSubmitButtonByName()
-                .clickClickButtonByText()
+                .clickEditByDataAttribute()
+                .clickSubmitByText()
+                .clickClickMeByName()
                 .clickPrimaryByXpath()
 
-                .switchToDefaultContent();
+                .switchToMainPage();
     }
 }
